@@ -10,7 +10,7 @@ const myFirstElement = React.createElement("ul",null,
             React.createElement("li", null, "item2"),
             React.createElement("li", null, "item3"),
             React.createElement("li", null, "whats up doc"),
-            inputTest
+            inputTest, inputTest
         ]
     )
 )
