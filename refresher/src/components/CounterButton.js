@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
 
-const CounterButton = () => {
+const CounterButton = (props) => {
     let [currentCount, setCurrentCount] = useState(0)
 
-    const handleClick = () => {
-        setCurrentCount(currentCount++)
+    const addButton = () => {
+        setCurrentCount(currentCount + props.incrementBy)
+    }
+
+    const subtractButton = () => {
+        setCurrentCount(currentCount - props.incrementBy)
     }
 
     return (
         
         <div>
-            <button onClick={handleClick}>Counter</button>
+            <button onClick={addButton}>+</button>
+            <button onClick={subtractButton}>-</button>
             <div>
                 {currentCount}
             </div>

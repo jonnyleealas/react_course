@@ -6,7 +6,8 @@ const App = () => {
     return (
         <>
         <List /> 
-       <CounterButton />
+        <CounterButton incrementBy={30}/>
+        <CounterButton incrementBy={5}/>
         </>
        
     )
