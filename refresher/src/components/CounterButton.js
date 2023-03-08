@@ -14,8 +14,8 @@ const CounterButton = (props) => {
     return (
         
         <div>
-            <button onClick={addButton}>+</button>
-            <button onClick={subtractButton}>-</button>
+            <button onClick={addButton}>+{props.incrementBy}</button>
+            <button onClick={subtractButton}>-{props.incrementBy}</button>
             <div>
                 {currentCount}
             </div>
