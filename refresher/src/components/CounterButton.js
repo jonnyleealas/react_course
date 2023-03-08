@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const CounterButton = () => {
-    let currentCount = 0;
+    let [currentCount, setCurrentCount] = useState(0)
+
     const handleClick = () => {
-       currentCount++
-    
+        setCurrentCount(currentCount++)
     }
+
     return (
         
         <div>
