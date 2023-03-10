@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CountButton.css';
 
 const CounterButton = (props) => {
     console.log(props)
@@ -20,9 +21,9 @@ const CounterButton = (props) => {
     return (
         
         <div>
-            <button style={buttonStyles}onClick={addButton}>+{props.incrementBy}</button>
-            <button onClick={subtractButton}>-{props.incrementBy}</button>
-            <div>
+            <button style={buttonStyles} onClick={addButton}>+{props.incrementBy}</button>
+            <button style={buttonStyles} onClick={subtractButton}>-{props.incrementBy}</button>
+            <div className={'count-display'}>
                 {currentCount}
             </div>
         </div>
