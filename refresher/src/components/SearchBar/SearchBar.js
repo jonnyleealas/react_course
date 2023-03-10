@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './SearchBar.css';
 
 const SearchBar = () => {
-
+    const [searchValue, setSearchValue] = useState('')
     const handleInputChange = (event) => {
-        console.log(event.target.value)
+        setSearchValue(event.target.value)
     }
+
+const ClearButton = () => {
+        setSearchValue('')
+}
     return (
     <div>
-        <input type='text' value='' onChange={handleInputChange}></input>
+        <input type='text' value={searchValue} onChange={handleInputChange}></input>
+        <button onClick={ClearButton}>Clear</button>
+        {searchValue}
     </div>
     )
 }
