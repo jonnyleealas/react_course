@@ -42,7 +42,7 @@ const App = () => {
     return (
         <>
         {
-            hasProducts ? <SearchBar products={productsState} /> : <div>{spinner}</div>
+            hasProducts ? <SearchBar products={productsState} /> : <img src={spinner} alt="Italian Trulli" />
         }
         </>
        
