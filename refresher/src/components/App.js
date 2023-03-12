@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CounterButton from './countButton/CounterButton';
 import SearchBar from './SearchBar/SearchBar';
-
+import spinner from './images/spinner.avif';
 
 
 const sportsTeams = [
@@ -42,7 +42,7 @@ const App = () => {
     return (
         <>
         {
-            hasProducts ? <SearchBar products={productsState} /> : "loading..."
+            hasProducts ? <SearchBar products={productsState} /> : <div>{spinner}</div>
         }
         </>
        
