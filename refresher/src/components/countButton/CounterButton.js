@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './CountButton.css';
 
 const CounterButton = (props) => {
@@ -17,6 +17,22 @@ const CounterButton = (props) => {
         background: props.buttonColor,
         borderRadius: props.borderRadius,
     }
+
+   // useEffect will run when page mount and can run if we add a function in  to the array in the second argument. Whenever that added function is run useEffect will also run.
+    useEffect(() => {
+        console.log("called when mounted or count is updated")
+        if(currentCount === 10){
+            alert('count reached 10')
+        }
+        if(currentCount === 30){
+            alert('count is now 30')
+            setCurrentCount(0)
+            alert('now the count will go back to 0')
+        }
+
+    }, [currentCount])
+
+
 
     return (
         
