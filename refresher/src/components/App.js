@@ -36,10 +36,14 @@ const App = () => {
             ])
         }, 2000)
     }, [])
+
+    const hasProducts = productsState.length > 0
      
     return (
         <>
-        <SearchBar products={productsState} />
+        {
+            hasProducts ? <SearchBar products={productsState} /> : "loading..."
+        }
         </>
        
     )
