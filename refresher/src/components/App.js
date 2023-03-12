@@ -1,13 +1,8 @@
+import React, { useState, useEffect } from 'react';
 import CounterButton from './countButton/CounterButton';
 import SearchBar from './SearchBar/SearchBar';
 
-const products = [
-    'tooth paste', 
-    'tooth brush',
-    'mouth wash',
-    'dental floss',
-    'mouth guard',
-]
+
 
 const sportsTeams = [
     'lakers',
@@ -24,20 +19,32 @@ const ufcFighters = [
     'anderson silva',
     'georges st pierre',
 ]
+
+
 const App = () => {
-    
+    const [productsState, setProductState] = useState([])
+
+
+    useEffect(() => {
+        setTimeout(() => {
+            setProductState([
+                'tooth brush',
+                'tooth paste',
+                'mouth wash',
+                'dental floss',
+                'mouth guard',
+            ])
+        }, 2000)
+    }, [])
+     
     return (
         <>
-        <CounterButton incrementBy={30} buttonColor={"blue"} borderRadius={"2px"}/>
-        <CounterButton incrementBy={5} buttonColor={"yellow"} borderRadius={"5px"}/>
-        <CounterButton incrementBy={5} buttonColor={"green"} borderRadius={"25px"}/>
-        <SearchBar products={products}/>
-        <SearchBar products={sportsTeams}/>
-        <SearchBar products={ufcFighters}/>
+        <SearchBar products={productsState} />
         </>
        
     )
 }
 
 
-export default App
+export default App;
+       
