@@ -34,7 +34,7 @@ const App = () => {
                 'dental floss',
                 'mouth guard',
             ])
-        }, 2000)
+        }, 5000)
     }, [])
 
     const hasProducts = productsState.length > 0
