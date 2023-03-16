@@ -5,6 +5,7 @@ import './SearchBar.css';
 
 const SearchBar = (props) => {
     const [searchValue, setSearchValue] = useState('')
+    
     const handleInputChange = (event) => {
         setSearchValue(event.target.value)
     }
